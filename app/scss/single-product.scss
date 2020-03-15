@@ -1,0 +1,396 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  color: $text;
+  input,
+  textarea {
+    border: #666 1px solid;
+    outline: none;
+    &:focus:required:invalid {
+      border-color: red;
+    }
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+.product {
+  .product__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .woocommerce-product-gallery {
+    opacity: 1 !important;
+    width: 49%;
+  }
+  .entry-summary {
+    width: 49%;
+  }
+  .back__btn {
+    width: 100%;
+  }
+  button.back-category {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #a5a8b4;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    svg {
+      margin-right: 8px;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      color: $hover;
+      svg {
+        fill: $hover;
+        transform: translateX(-5px);
+      }
+    }
+  }
+  .product__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .product__descr {
+    width: 49%;
+  }
+  .product__head {
+    padding: 64px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product__name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .name {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+    margin-bottom: 0;
+  }
+  .cat {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #a5a8b4;
+  }
+  .product__material {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .material {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #a5a8b4;
+    &:first-child {
+      margin-bottom: 18px;
+    }
+    img {
+      margin-right: 8px;
+    }
+  }
+  .product__attr {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 64px 0;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+  }
+  .var-title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+    display: block;
+    margin-bottom: 16px;
+  }
+  .variation-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    input {
+      text-align: center;
+      width: 70px;
+      height: 36px;
+      background-color: transparent;
+      border: 0;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+    }
+    .quantity {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .quant {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    border: 0;
+    line-height: 31px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+
+  .size-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .var-size {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0;
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+    }
+    label,
+    a {
+      width: 87px;
+      height: 46px;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      font-size: 14px;
+      border: 1px solid transparent;
+      color: #000000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        border: 1px solid $hover;
+        background-color: $hover;
+        color: #ffffff;
+      }
+    }
+    a.active {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    label.active-size {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio:checked + .label-size {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio:focus + .label-size {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio1:checked + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio1:focus + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio3:checked + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio3:focus + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio4:checked + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio4:focus + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio5:checked + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+    #radio5:focus + .label-size1 {
+      border: 1px solid #000;
+      background-color: $hover;
+    }
+  }
+  .product__buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+  }
+  .product__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .price__title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+    display: block;
+  }
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+  }
+  .add-to-cart {
+    width: 269px;
+    height: 64px;
+    background: $hover;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 0;
+    cursor: pointer;
+    img {
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: $theme;
+    }
+  }
+
+  .product__description {
+    padding: 64px 0;
+  }
+  .descr {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+  }
+  .product__thumb {
+    width: 48%;
+  }
+  .thumb {
+    margin-bottom: 64px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .product__social {
+    background: #f8f8f8;
+    border-radius: 16px;
+    padding: 40px 60px;
+  }
+  .product-soc__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .soc__title {
+    margin-bottom: 16px;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #10131f;
+    text-align: center;
+  }
+  .product-social__link {
+    background: $hover;
+    border-radius: 8px;
+    width: 103px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $theme;
+    }
+  }
+}
