@@ -173,7 +173,18 @@ body {
       align-items: center;
     }
   }
-
+  .variation__wrap {
+    width: 28%;
+    &:last-child {
+      width: 65%;
+    }
+  }
+  .information__variation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
   .quant {
     width: 48px;
     height: 48px;
@@ -190,6 +201,7 @@ body {
     transition: all 0.3s ease;
     &:hover {
       background-color: $hover;
+      color: #ffffff;
     }
   }
 
@@ -231,6 +243,7 @@ body {
       color: #000000;
       cursor: pointer;
       transition: all 0.3s ease;
+      margin-right: 8px;
       &:hover {
         border: 1px solid $hover;
         background-color: $hover;
@@ -238,52 +251,64 @@ body {
       }
     }
     a.active {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     label.active-size {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio:checked + .label-size {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio:focus + .label-size {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio1:checked + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio1:focus + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio3:checked + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio3:focus + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio4:checked + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio4:focus + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio5:checked + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
     #radio5:focus + .label-size1 {
-      border: 1px solid #000;
+      border: 1px solid $hover;
       background-color: $hover;
+      color: #ffffff;
     }
   }
   .product__buy {
