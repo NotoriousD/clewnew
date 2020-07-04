@@ -1,6 +1,10 @@
 @import "vars";
 @import "fonts";
 
+.clew__checkout {
+  padding: 40px 0;
+}
+
 .woocommerce form .form-row label {
   line-height: 1;
 }
@@ -50,7 +54,7 @@
 }
 
 .woocommerce table.shop_table thead th {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .woocommerce #respond input#submit.alt,
@@ -75,6 +79,12 @@
   outline: none;
 }
 
+body .woocommerce table.shop_table tbody th,
+body .woocommerce table.shop_table tfoot td,
+body .woocommerce table.shop_table tfoot th {
+  font-weight: 400;
+}
+
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
@@ -85,7 +95,8 @@
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
-  background-color: $accent;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
 
@@ -123,4 +134,15 @@
 
 #billing_company_field {
   display: none;
+}
+
+.woocommerce-error {
+  background-color: transparent;
+  border: 2px solid #b81c23;
+}
+
+.checkout__delivery {
+  &:last-child {
+    display: none;
+  }
 }
