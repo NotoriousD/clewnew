@@ -203,4 +203,18 @@ $(function () {
   if ($(window).width() <= 500) {
     $(".catalog__item").addClass("item__row");
   }
+
+  /* $(".checkout-step__container").steps({
+    headerTag: ".wc-custom-checkout__title",
+    bodyTag: ".checkout-step__container",
+    transitionEffect: "slideLeft",
+    autoFocus: true,
+    labels: {
+      next: 'Наступний крок',
+      previous: 'Попередній крок',
+      finish: false
+    },
+    transitionEffectSpeed: 0,
+  }); */
+
 });

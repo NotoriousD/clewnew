@@ -48,6 +48,7 @@ gulp.task("scripts", function () {
     gulp
       .src([
         "app/libs/jquery/dist/jquery.min.js",
+        "app/libs/jquery/dist/jquery.steps.min.js",
         "app/libs/slick/slick.min.js",
         "app/js/common.js",
       ])

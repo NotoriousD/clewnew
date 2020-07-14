@@ -6,6 +6,10 @@
   color: #666;
 }
 
+*{
+  outline: none;
+}
+
 ::selection {
   background-color: $accent;
   color: #fff;
@@ -1214,6 +1218,9 @@ html body .woocommerce-message {
 body {
   .wcspc-area-bot .wcspc-action .wcspc-action-inner > div.wcspc-action-right a {
     letter-spacing: 2px;
+  }
+  .wcspc-area-top.wcspc-items .wcspc-item-price span{
+    font-size: 18px !important;
   }
   .wcspc-area.wcspc-effect-02 {
     transform: translate3d(0%, 0, 0);
